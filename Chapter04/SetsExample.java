@@ -2,6 +2,8 @@ package Chapter04;
 
 import java.util.*;
 import java.io.Console;
+import java.util.Map;
+
 
 public class SetsExample {
     public static void main(String[] args) {
@@ -33,5 +35,37 @@ class AnalyzeInput {
         for(int i = 0;i<list.size();i++){
             System.out.println("You typed: " + list.get(i));
         }
+    }
+}
+
+ class Example15 {
+    public static void main(String[] args) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("number", new Integer(1));
+        map.put("text", new String("hola"));
+        map.put("decimal", new Double(5.7));
+        System.out.println(map.get("text"));
+        if (!map.containsKey("byte")) {
+            System.out.println("There are no bytes here!");
+        }
+        System.out.println(map.entrySet());
+    }
+}
+
+
+class Example16 {
+    public static void main(String[] args) {
+        List<Integer> array = new ArrayList<>();
+        array.add(5);
+        array.add(2);
+        array.add(37);
+        Iterator<Integer> iterator = array.iterator();
+        while (iterator.hasNext()) {
+                // point to next element
+                int i = iterator.next();
+                // print elements
+                System.out.print(i + " ");
+        }
+
     }
 }
